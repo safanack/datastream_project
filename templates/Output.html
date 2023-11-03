@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+	<title>ClickHouse Query Results</title>
+
+</head>
+
+
+
+<body>
+	<div>
+		<form action="/GetResult" method="GET">
+
+
+
+			<button type="submit">Reload</button>
+
+		</form>
+	</div>
+
+	<h2>Query Results:</h2>
+
+	<table>
+
+		<tr>
+
+			<th>CampaignId</th>
+
+			<th>count of Abusive</th>
+
+
+
+		</tr>
+
+		{{range .}}
+
+		<tr>
+
+			<td>{{.CampaignId}}</td>
+
+			<td>{{.Abusive}}</td>
+
+
+		</tr>
+
+		{{end}}
+
+	</table>
+
+</body>
+
+
+
+</html>
